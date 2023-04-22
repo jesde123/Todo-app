@@ -1,5 +1,5 @@
 const PAGE_URL = process.env.NODE_ENV === 'production'
-    ? 'placeholder'
+    ? 'https://todo-list-ajve.onrender.com'
     : 'http://localhost:3003';
 
     module.exports = { PAGE_URL };
