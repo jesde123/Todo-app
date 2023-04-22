@@ -29,10 +29,10 @@ const validation = (input, regexValidation) => {
         input.classList.remove('outline-green-700','outline-2', 'outline');
         input.classList.add('focus:outline-indigo-700');
     } else if (regexValidation) {
-        input.classList.remove('focus:outline-indigo-700');
+        input.classList.remove('focus:outline-indigo-700', 'outline-red-700');
         input.classList.add('outline-green-700', 'outline-2', 'outline');
     } else if (!regexValidation) {
-        input.classList.remove('focus:outline-indigo-700');
+        input.classList.remove('focus:outline-indigo-700', 'outline-green-700');
         input.classList.remove('outline-green-700', 'outline-2', 'outline');
         input.classList.add('outline-red-700', 'outline-2', 'outline');
     }};

@@ -84,7 +84,7 @@ ul.addEventListener('click', async e => {
 	if (e.target.closest('.delete-icon')) {
 		const li = e.target.closest('.delete-icon').parentElement.parentElement;
 		await axios.delete(`/api/todos/${li.id}`);
-
+		console.log(li);
 		li.remove();
 		todoCount();
 	}
