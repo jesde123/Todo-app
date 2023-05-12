@@ -83,7 +83,9 @@ ul.addEventListener('click', async e => {
 	// Select delete-icon
 	if (e.target.closest('.delete-icon')) {
 		const li = e.target.closest('.delete-icon').parentElement.parentElement;
+		console.log(li);
 		await axios.delete(`/api/todos/${li.id}`);
+		console.log('jamon');
 		console.log(li);
 		li.remove();
 		todoCount();
@@ -136,7 +138,7 @@ ul.addEventListener('click', async e => {
 				</button>
 			`;
 
-			if (todo.cheked) {
+			if (todo.checked) {
 				listItem.children[1].classList.add('bg-green-400');
 				listItem.children[1].classList.remove('hover:bg-green-300');
 				listItem.classList.add('line-through', 'text-slate-400', 'dark:text-slate-600');

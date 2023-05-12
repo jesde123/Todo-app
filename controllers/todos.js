@@ -34,7 +34,7 @@ todosRouter.delete('/:id', async (request, response) => {
     //otro metodo para eliminar
    // user.todos = user.todos.filter(id => id.toString() !== request.params.id);
    
-    await user.save();
+    // await user.save();
     return response.status(204);
 });
 
