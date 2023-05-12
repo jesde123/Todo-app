@@ -15,7 +15,7 @@ const logoutRouter = require('./controllers/logout');
  
 (async () => {
     try {
-        await mongoose.connect(MONGO_URI);
+        await mongoose.connect(process.env.MONGO_URI_TEST);
         console.log('conecto a mongoDB');
     } catch (error) {
         console.log(error);
